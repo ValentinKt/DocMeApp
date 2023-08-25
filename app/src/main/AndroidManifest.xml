@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.docmeapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.docmeapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.docmeapp.app.modules.location.ui.LocationActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/str_maps_api_key"/>
+        <activity
+            android:name="com.docmeapp.app.modules.audiocall.ui.AudioCallActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.onboardingtwo.ui.OnboardingTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.pharmacy.ui.PharmacyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.articles.ui.ArticlesActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.docmeapp.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.docmeapp.app.modules.onboardingone.ui.OnboardingOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.finddoctors.ui.FindDoctorsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.signup.ui.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.onboardingfour.ui.OnboardingFourActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.resetpasswordverifycode.ui.ResetPasswordVerifyCodeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.bookingdoctor.ui.BookingDoctorActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.drugsdetail.ui.DrugsDetailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.videocall.ui.VideoCallActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.mycart.ui.MyCartActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.doctordetail.ui.DoctorDetailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.chatwithdoctor.ui.ChatWithDoctorActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.topdoctor.ui.TopDoctorActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.onboardingthree.ui.OnboardingThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.resetpasswordemailtabcontainer.ui.ResetPasswordEmailTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.docmeapp.app.modules.createnewpassword.ui.CreateNewPasswordActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

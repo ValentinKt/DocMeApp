@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="doctorsRowModel" type="com.docmeapp.app.modules.finddoctors.data.model.DoctorsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearDrAlex"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageEllipseEightyEight"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_64pxh"
+            android:layout_width="@dimen/_64pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse88_64x64}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse88_64x64"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{doctorsRowModel.txtName}"
+            style="@style/txtRalewayromanmedium13" tools:text="@string/lbl_dr_marcus"/>
+    </LinearLayout>
+</layout>

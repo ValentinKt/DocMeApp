@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font app:font="@font/InterRegular" app:fontWeight="400"/>
+    <font app:font="@font/InterSemiBold" app:fontWeight="600"/>
+    <font app:font="@font/InterBold" app:fontWeight="700"/>
+    <font app:font="@font/InterBlackItalic" app:fontWeight="900"/>
+    <font app:font="@font/InterMedium" app:fontWeight="500"/>
+</font-family>

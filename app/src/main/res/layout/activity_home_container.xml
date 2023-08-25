@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeContainerVM" type="com.docmeapp.app.modules.homecontainer.data.viewmodel.HomeContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHome"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700_01">
+        <FrameLayout android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottombar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageHome"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_home"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+            <ImageView android:id="@+id/imageArrowdown"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowdown"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown"/>
+            <ImageView android:id="@+id/imageBag"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_bag"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_bag"/>
+            <ImageView android:id="@+id/imageUserOne"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user_1"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

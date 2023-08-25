@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="doctorDetailVM" type="com.docmeapp.app.modules.doctordetail.data.viewmodel.DoctorDetailVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearDoctorDetail"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDoctorDetail"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{doctorDetailVM.doctorDetailModel.txtDoctorDetail}"
+                style="@style/txtRalewayromansemibold16" tools:text="@string/lbl_doctor_detail"/>
+            <ImageView android:id="@+id/imageComponentOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component1"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnrectangle959"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_32pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_32pxv">
+            <LinearLayout android:id="@+id/linearProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageRectangle959"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_115pxh"
+                    android:layout_width="@dimen/_115pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_8pxh}"
+                    imageRes="@{@drawable/img_rectangle959_111x111}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle959_111x111"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndrmarcushorizonone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDrMarcusHorizonOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtDrMarcusHorizonOne}"
+                        style="@style/txtRalewayromansemibold18_1" tools:text="@string/msg_dr_marcus_hori"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtChardiologist"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtChardiologist}"
+                        style="@style/txtRalewayromanmedium14_2" tools:text="@string/lbl_chardiologist"/>
+                    <LinearLayout android:id="@+id/linearRowstar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageStar"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_star"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_star"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFortySeven"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{doctorDetailVM.doctorDetailModel.txtFortySeven}"
+                            style="@style/txtRalewayromanmedium13_1" tools:text="@string/lbl_4_7"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearRowlocation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageLocation"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_16pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_location"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@+id/txtDistance"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{doctorDetailVM.doctorDetailModel.txtDistance}"
+                            style="@style/txtRalewayromanmedium14_2" tools:text="@string/lbl_800m_away"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtAbout"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{doctorDetailVM.doctorDetailModel.txtAbout}"
+                style="@style/txtRalewayromansemibold16" tools:text="@string/lbl_about"/>
+            <TextView android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{doctorDetailVM.doctorDetailModel.txtDescription}"
+                style="@style/txtInterregular12" tools:text="@string/msg_lorem_ipsum_dol"/>
+            <LinearLayout android:id="@+id/linearRowmon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnmon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_12pxh"
+                    android:paddingStart="@dimen/_12pxh"
+                    android:paddingTop="@dimen/_13pxv" style="@style/groupStylewhite_7">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMon"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtMon}"
+                        style="@style/txtRalewayromanregular10" tools:text="@string/lbl_mon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwentyOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTwentyOne}"
+                        style="@style/txtRalewayromansemibold18_1" tools:text="@string/lbl_21"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumntue"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_11pxh"
+                    android:paddingStart="@dimen/_11pxh"
+                    android:paddingTop="@dimen/_13pxv" style="@style/groupStylewhite_7">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTue"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTue}"
+                        style="@style/txtRalewayromanregular10" tools:text="@string/lbl_tue"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwentyTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTwentyTwo}"
+                        style="@style/txtRalewayromansemibold18_1" tools:text="@string/lbl_22"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnwed"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_11pxh"
+                    android:paddingVertical="@dimen/_11pxv" style="@style/groupStyleblue_600cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWed"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtWed}"
+                        style="@style/txtRalewayromanregular10_1" tools:text="@string/lbl_wed"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwentyThree"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTwentyThree}"
+                        style="@style/txtRalewayromansemibold18" tools:text="@string/lbl_23"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnthu"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_12pxv"
+                    android:paddingEnd="@dimen/_11pxh"
+                    android:paddingStart="@dimen/_11pxh"
+                    android:paddingTop="@dimen/_12pxv" style="@style/groupStylewhite_7">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtThu"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtThu}"
+                        style="@style/txtRalewayromanregular10" tools:text="@string/lbl_thu"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwentyFour"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTwentyFour}"
+                        style="@style/txtRalewayromansemibold18_1" tools:text="@string/lbl_24"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnfri"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_11pxh"
+                    android:paddingVertical="@dimen/_11pxv" style="@style/groupStylewhite_7">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFri"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtFri}"
+                        style="@style/txtRalewayromanregular10" tools:text="@string/lbl_fri"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwentyFive"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTwentyFive}"
+                        style="@style/txtRalewayromansemibold18_1" tools:text="@string/lbl_25"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnsat"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_11pxh"
+                    android:paddingStart="@dimen/_11pxh"
+                    android:paddingTop="@dimen/_14pxv" style="@style/groupStylewhite_7">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSat"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtSat}"
+                        style="@style/txtRalewayromanregular10" tools:text="@string/lbl_sat"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwentySix"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{doctorDetailVM.doctorDetailModel.txtTwentySix}"
+                        style="@style/txtRalewayromansemibold18_1" tools:text="@string/lbl_26"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/blue_gray_50"
+                android:id="@+id/lineLine"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+            <FrameLayout android:id="@+id/frameChipviewgroupthirtysix"
+                android:layout_height="wrap_content" android:layout_width="match_parent">
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupThirtySix"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_blue_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupThirtySeven"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupThirtyEight"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_27pxh"
+                    android:paddingStart="@dimen/_27pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupThirtyNine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_26pxh"
+                    android:paddingStart="@dimen/_26pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_blue_600_radius_15"
+                    android:id="@+id/frameGroupForty"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_blue_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupFortyOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_blue_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupFortyTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_blue_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupFortyThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_white_a700_border_gray_100_01_radius_15"
+                    android:id="@+id/frameGroupFortyFour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_25pxh"
+                    android:paddingStart="@dimen/_25pxh" android:paddingTop="@dimen/_11pxv"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowmusic"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_blue_50_02_radius_8"
+                android:id="@+id/btnMusic"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:paddingHorizontal="@dimen/_13pxh"
+                android:paddingVertical="@dimen/_13pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_music_50x50" tools:ignore="ContentDescription"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:id="@+id/btnBookapointmentOne"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_266pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_74pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_book_apointment"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_book_apointment"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

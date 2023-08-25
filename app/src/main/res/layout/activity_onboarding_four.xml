@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onboardingFourVM" type="com.docmeapp.app.modules.onboardingfour.data.viewmodel.OnboardingFourVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOnboardingFour"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnvideocamera"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_16pxv">
+            <ImageView android:id="@+id/imageVideocamera"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_66pxh"
+                android:layout_width="@dimen/_59pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_videocamera"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_videocamera"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHelthio"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{onboardingFourVM.onboardingFourModel.txtHelthio}"
+                style="@style/txtRalewayromanbold25" tools:text="@string/lbl_helthio"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHeadline"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{onboardingFourVM.onboardingFourModel.txtHeadline}"
+                style="@style/txtRalewayromanbold22" tools:text="@string/msg_let_s_get_start"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtLogintoenjoytheOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:text="@{onboardingFourVM.onboardingFourModel.txtLogintoenjoytheOne}"
+                style="@style/txtRalewayromanmedium16" tools:text="@string/msg_login_to_enjoy"/>
+            <FrameLayout android:id="@+id/frameGroup2336"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnLogin"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_327pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_141pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_login"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_login"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_border_blue_600_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnSignup"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_56pxv"
+            android:layout_width="@dimen/_328pxh"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_132pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_600"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_sign_up"/>
+    </LinearLayout>
+</layout>

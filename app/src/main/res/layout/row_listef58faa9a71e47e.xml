@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listef58faa9a71e47eRowModel" type="com.docmeapp.app.modules.pharmacy.data.model.Listef58faa9a71e47eRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearDrugs"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingEnd="@dimen/_7pxh"
+        android:paddingStart="@dimen/_7pxh"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStylewhite_8">
+        <ImageView android:id="@+id/imageEf58faa9a71e47e"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxh"
+            android:layout_width="@dimen/_56pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_29pxh}"
+            imageRes="@{@drawable/img_ef58faa9a71e47e_58x56}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ef58faa9a71e47e_58x56"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listef58faa9a71e47eRowModel.txtName}"
+            style="@style/txtRalewayromansemibold14_3" tools:text="@string/lbl_panadol"/>
+        <TextView android:ellipsize="end" android:id="@+id/txt20pcs"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listef58faa9a71e47eRowModel.txt20pcs}"
+            style="@style/txtRalewayromanmedium12_1" tools:text="@string/lbl_20pcs"/>
+        <LinearLayout android:id="@+id/linearRowprice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listef58faa9a71e47eRowModel.txtPrice}"
+                style="@style/txtRalewayromansemibold14_4" tools:text="@string/lbl_15_99"/>
+            <ImageView android:id="@+id/imagePlus"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_plus"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
