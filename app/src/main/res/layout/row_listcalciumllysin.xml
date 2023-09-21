@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcalciumllysinRowModel" type="com.docmeapp.app.modules.pharmacy.data.model.ListcalciumllysinRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearDrugs"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_8pxv"
+        android:paddingEnd="@dimen/_7pxh"
+        android:paddingStart="@dimen/_7pxh"
+        android:paddingTop="@dimen/_8pxv" style="@style/groupStylewhite_8">
+        <ImageView android:id="@+id/imageCalciumllysin"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_68pxh"
+            android:layout_width="@dimen/_66pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_34pxh}"
+            imageRes="@{@drawable/img_calciumllysin_68x66}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_calciumllysin_68x66"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtProductname"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{listcalciumllysinRowModel.txtProductname}"
+            style="@style/txtRalewayromansemibold14_3" tools:text="@string/lbl_obh_combi"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtMeasurement"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listcalciumllysinRowModel.txtMeasurement}"
+            style="@style/txtRalewayromanmedium12_1" tools:text="@string/lbl_75ml"/>
+        <LinearLayout android:id="@+id/linearRowprice1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameStackprice"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_17pxv" android:layout_width="@dimen/_74pxh">
+                <LinearLayout android:id="@+id/linearRowprice2"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{listcalciumllysinRowModel.txtPrice}"
+                        style="@style/txtRalewayromansemibold14_4" tools:text="@string/lbl_9_99"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPriceOne"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{listcalciumllysinRowModel.txtPriceOne}"
+                        style="@style/txtRalewayromansemibold8" tools:text="@string/lbl_10_99"/>
+                </LinearLayout>
+                <View android:background="@color/gray_700_01"
+                    android:id="@+id/viewRectangleThirtyFour"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_29pxh"/>
+            </FrameLayout>
+            <ImageView android:id="@+id/imagePlus"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_plus"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="scheduleRowModel" type="com.docmeapp.app.modules.schedule.data.model.ScheduleRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnpexelscedricf"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_14pxv"
+        android:paddingEnd="@dimen/_15pxh"
+        android:paddingStart="@dimen/_15pxh"
+        android:paddingTop="@dimen/_14pxv" style="@style/groupStylewhite_3">
+        <LinearLayout android:id="@+id/linearRowdoctorname"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumndoctorname"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDoctorname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{scheduleRowModel.txtDoctorname}"
+                    style="@style/txtRalewayromansemibold18_1" tools:text="@string/msg_dr_marcus_hori"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSpecialty"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{scheduleRowModel.txtSpecialty}"
+                    style="@style/txtRalewayromanmedium12_1" tools:text="@string/lbl_chardiologist"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imagePexelscedricf"
+                android:layout_height="@dimen/_46pxh"
+                android:layout_width="@dimen/_46pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_pexelscedricf_46x46_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_pexelscedricf_46x46_1"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowcalendar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCalendar"
+                android:layout_height="@dimen/_15pxh"
+                android:layout_width="@dimen/_15pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_calendar_15x15"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_15x15"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtDate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtDate}"
+                style="@style/txtRalewayromanmedium12_2" tools:text="@string/lbl_26_06_2022"/>
+            <ImageView android:id="@+id/imageClock"
+                android:layout_height="@dimen/_15pxh"
+                android:layout_width="@dimen/_15pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_clock_15x15"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_clock_15x15"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtTime}"
+                style="@style/txtRalewayromanmedium12_2" tools:text="@string/lbl_10_30_am"/>
+            <View
+                android:background="@drawable/rectangle_bg_green_300_radius_3"
+                android:id="@+id/viewEllipseTen"
+                android:layout_height="@dimen/_6pxh" android:layout_width="@dimen/_6pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtStatus"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtStatus}"
+                style="@style/txtRalewayromanmedium12_2" tools:text="@string/lbl_confirmed"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowgroup126"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtGroup126"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_48pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtGroup126}"
+                style="@style/txtSolidRounded" tools:text="@string/lbl_cancel"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtGroup127"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_32pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@{scheduleRowModel.txtGroup127}"
+                style="@style/txtSolidRounded_1" tools:text="@string/lbl_reschedule"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

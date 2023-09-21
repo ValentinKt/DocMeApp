@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myCartVM" type="com.docmeapp.app.modules.mycart.data.viewmodel.MyCartVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearMyCart"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMyCart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{myCartVM.myCartModel.txtMyCart}"
+                style="@style/txtRalewayromansemibold16" tools:text="@string/lbl_my_cart"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnhealthvitllys"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_24pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_24pxv">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerMycart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_20pxh}" tools:itemCount="2" tools:listitem="@layout/row_mycart"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentDetail"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{myCartVM.myCartModel.txtPaymentDetail}"
+                style="@style/txtIntersemibold16" tools:text="@string/lbl_payment_detail"/>
+            <LinearLayout android:id="@+id/linearSubtotal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSubtotal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtSubtotal}"
+                    style="@style/txtInterregular14_1" tools:text="@string/lbl_subtotal"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtPrice}"
+                    style="@style/txtInterregular14_1" tools:text="@string/lbl_25_98"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTaxes"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTaxes"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtTaxes}"
+                    style="@style/txtInterregular14_1" tools:text="@string/lbl_taxes"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceOne"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtPriceOne}"
+                    style="@style/txtInterregular14_1" tools:text="@string/lbl_1_00"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTotal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtTotal}"
+                    style="@style/txtIntersemibold14" tools:text="@string/lbl_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceTwo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtPriceTwo}"
+                    style="@style/txtIntersemibold14" tools:text="@string/lbl_26_98"/>
+            </LinearLayout>
+            <View android:background="@color/blue_gray_50"
+                android:id="@+id/lineLine"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_335pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentMethod"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{myCartVM.myCartModel.txtPaymentMethod}"
+                style="@style/txtIntersemibold16" tools:text="@string/lbl_payment_method"/>
+            <LinearLayout android:id="@+id/linearCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv" style="@style/groupStylewhite_8">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVISA"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtVISA}"
+                    style="@style/txtInterblackitalic16" tools:text="@string/lbl_visa"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChange"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtChange}"
+                    style="@style/txtInterregular12_1" tools:text="@string/lbl_change"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearRowtotalone"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearTotal1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotalOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtTotalOne}"
+                    style="@style/txtIntermedium14" tools:text="@string/lbl_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{myCartVM.myCartModel.txtPriceThree}"
+                    style="@style/txtIntersemibold18_1" tools:text="@string/lbl_26_982"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnCheckout"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_192pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_63pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_checkout"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

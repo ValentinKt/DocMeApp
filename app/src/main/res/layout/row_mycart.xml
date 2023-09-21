@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mycartRowModel" type="com.docmeapp.app.modules.mycart.data.model.MycartRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowhealthvitllys"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_14pxh"
+        android:paddingVertical="@dimen/_14pxv" style="@style/groupStylewhite_8">
+        <ImageView android:id="@+id/imageHealthvitllys"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_healthvitllys_50x50_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_healthvitllys_50x50_1"/>
+        <LinearLayout android:id="@+id/linearColumntrash"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowtype"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumntype"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtType"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{mycartRowModel.txtType}"
+                        style="@style/txtIntersemibold18_1" tools:text="@string/lbl_obh_combi"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMeasurement"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{mycartRowModel.txtMeasurement}"
+                        style="@style/txtIntermedium12" tools:text="@string/lbl_75ml"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageTrash"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_trash_18x18"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_trash_18x18"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowcar"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_car_32x32"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_car_32x32"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtQuantity"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{mycartRowModel.txtQuantity}"
+                    style="@style/txtIntersemibold16" tools:text="@string/lbl_1"/>
+                <ImageView android:id="@+id/imagePlus"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_plus"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{mycartRowModel.txtPrice}"
+                    style="@style/txtIntersemibold18_1" tools:text="@string/lbl_9_99"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

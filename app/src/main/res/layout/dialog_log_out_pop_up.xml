@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="logOutPopUpVM" type="com.docmeapp.app.modules.logoutpopup.data.viewmodel.LogOutPopUpVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLogOutPopUp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearPopUp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_49pxv"
+            android:paddingEnd="@dimen/_27pxh"
+            android:paddingStart="@dimen/_27pxh"
+            android:paddingTop="@dimen/_49pxv" style="@style/groupStylewhite_4">
+            <FrameLayout android:id="@+id/frameStackminimize"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_103pxv"
+                android:layout_width="@dimen/_103pxh"
+                android:paddingHorizontal="@dimen/_22pxh"
+                android:paddingVertical="@dimen/_22pxv" style="@style/groupStylered_50cornerRadius">
+                <ImageView android:id="@+id/imageMinimize"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_58pxh"
+                    android:layout_width="@dimen/_58pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_minimize"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_minimize"/>
+            </FrameLayout>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{logOutPopUpVM.logOutPopUpModel.txtConfirmation}"
+                style="@style/txtInterbold20" tools:text="@string/msg_are_you_sure_to"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_red_a200_radius_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnLogout"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_273pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_106pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_log_out"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_log_out"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCancel"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{logOutPopUpVM.logOutPopUpModel.txtCancel}"
+                style="@style/txtIntersemibold16_1" tools:text="@string/lbl_cancel"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

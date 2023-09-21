@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpSuccessVM" type="com.docmeapp.app.modules.signupsuccess.data.viewmodel.SignUpSuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSignUpSuccess"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearPopUp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_49pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_49pxv" style="@style/groupStylewhite_4">
+            <FrameLayout android:id="@+id/frameDone"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_102pxv"
+                android:layout_width="@dimen/_102pxh"
+                android:paddingBottom="@dimen/_34pxv"
+                android:paddingEnd="@dimen/_29pxh"
+                android:paddingStart="@dimen/_29pxh"
+                android:paddingTop="@dimen/_34pxv" style="@style/groupStylegray_50cornerRadius">
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_31pxh"
+                    android:layout_width="@dimen/_41pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_31x41"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_31x41"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSuccess"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{signUpSuccessVM.signUpSuccessModel.txtSuccess}"
+                style="@style/txtRalewayromanbold20" tools:text="@string/lbl_success"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtYouraccounthas"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:text="@{signUpSuccessVM.signUpSuccessModel.txtYouraccounthas}"
+                style="@style/txtRalewayromanregular16" tools:text="@string/msg_your_account_ha"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnGotohome"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_279pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_94pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_go_to_home"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_go_to_home"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

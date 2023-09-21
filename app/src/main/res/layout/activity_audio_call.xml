@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="audioCallVM" type="com.docmeapp.app.modules.audiocall.data.viewmodel.AudioCallVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAudioCall"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_23pxv"
+        android:paddingTop="@dimen/_23pxv" style="@style/groupStylewhite_9">
+        <FrameLayout android:id="@+id/frameGroup2325"
+            android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        <ImageView android:id="@+id/imageImageTen"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_115pxh"
+            android:layout_width="@dimen/_115pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_image10_115x115}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image10_115x115"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTime"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{audioCallVM.audioCallModel.txtTime}"
+            style="@style/txtRalewayromanmedium14_5" tools:text="@string/lbl_00_05_24"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowvideocamera"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_400_87_radius_26"
+                android:id="@+id/btnVideocamera"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_52pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_videocamera_52x52" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_red_300_radius_26"
+                android:id="@+id/btnCall"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_52pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_call_52x52" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_400_87_radius_26"
+                android:id="@+id/btnMicrophone"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_52pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_microphone" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageArrowup"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowup"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowup"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtSwipebacktomenuOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{audioCallVM.audioCallModel.txtSwipebacktomenuOne}"
+            style="@style/txtRalewayromanmedium14_5" tools:text="@string/msg_swipe_back_to_m"/>
+    </LinearLayout>
+</layout>

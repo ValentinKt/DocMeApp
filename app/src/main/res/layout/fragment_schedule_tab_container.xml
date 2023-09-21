@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="scheduleTabContainerVM" type="com.docmeapp.app.modules.scheduletabcontainer.data.viewmodel.ScheduleTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumncomponentone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSchedule"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{scheduleTabContainerVM.scheduleTabContainerModel.txtSchedule}"
+                style="@style/txtRalewayromansemibold24" tools:text="@string/lbl_schedule"/>
+            <FrameLayout android:id="@+id/frameGroup22"
+                android:layout_height="@dimen/_33pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageComponentOne"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_component1_white_a700"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_component1_white_a700"/>
+                <ImageView android:id="@+id/imageVolume"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_volume"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_volume"/>
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearColumnupcoming"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutGroup125"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_blue_600_radius_8"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white_A700"
+                app:tabTextColor="@color/gray_900_01" style="@style/groupStylegray_100_02cornerRadius"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabbarview"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

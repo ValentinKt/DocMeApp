@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myCartPopUpVM" type="com.docmeapp.app.modules.mycartpopup.data.viewmodel.MyCartPopUpVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearMyCartPopup"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearPopUp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_49pxv"
+            android:paddingEnd="@dimen/_25pxh"
+            android:paddingStart="@dimen/_25pxh"
+            android:paddingTop="@dimen/_49pxv" style="@style/groupStylewhite_4">
+            <FrameLayout android:id="@+id/frameDone"
+                android:layout_height="@dimen/_102pxv"
+                android:layout_width="@dimen/_102pxh"
+                android:paddingBottom="@dimen/_34pxv"
+                android:paddingEnd="@dimen/_29pxh"
+                android:paddingStart="@dimen/_29pxh"
+                android:paddingTop="@dimen/_34pxv" style="@style/groupStylegray_50cornerRadius">
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_31pxh"
+                    android:layout_width="@dimen/_41pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_31x41"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_31x41"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentSuccess"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{myCartPopUpVM.myCartPopUpModel.txtPaymentSuccess}"
+                style="@style/txtRalewayromanbold20" tools:text="@string/lbl_payment_success"/>
+            <TextView android:id="@+id/txtYourpaymenthas"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{myCartPopUpVM.myCartPopUpModel.txtYourpaymenthas}"
+                style="@style/txtRalewayromanregular16" tools:text="@string/msg_your_payment_ha"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnBackhome"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_273pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_92pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_back_home"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_back_home"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

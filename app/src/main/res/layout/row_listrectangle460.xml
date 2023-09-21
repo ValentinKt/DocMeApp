@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listrectangle460RowModel" type="com.docmeapp.app.modules.articles.data.model.Listrectangle460RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnrectangle460"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingEnd="@dimen/_8pxh"
+        android:paddingStart="@dimen/_8pxh"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStylecornerRadius_1">
+        <FrameLayout android:id="@+id/frameStackrectangle460"
+            android:layout_height="@dimen/_87pxv" android:layout_width="@dimen/_138pxh">
+            <ImageView android:id="@+id/imageRectangle460"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_87pxh"
+                android:layout_width="@dimen/_138pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+                imageRes="@{@drawable/img_rectangle460_87x138}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle460_87x138"/>
+            <ImageView android:id="@+id/imageBookmark"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_15pxh"
+                android:layout_width="@dimen/_15pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_bookmark_15x15"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_15x15"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtGroup144"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingBottom="@dimen/_1pxv"
+            android:paddingEnd="@dimen/_5pxh"
+            android:paddingStart="@dimen/_5pxh"
+            android:paddingTop="@dimen/_1pxv" android:singleLine="true"
+            android:text="@{listrectangle460RowModel.txtGroup144}"
+            style="@style/txtSolidRounded_4" tools:text="@string/lbl_covid_19"/>
+        <TextView android:id="@+id/txtComparingtheAstraZeneca"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:text="@{listrectangle460RowModel.txtComparingtheAstraZeneca}"
+            style="@style/txtRalewayromansemibold12" tools:text="@string/msg_comparing_the_a"/>
+        <LinearLayout android:id="@+id/linearRowjun122021"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtJun122021"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listrectangle460RowModel.txtJun122021}"
+                style="@style/txtRalewayromanmedium9" tools:text="@string/lbl_jun_12_2021"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_500_radius_1"
+                android:id="@+id/viewEllipseEleven"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_2pxh" android:layout_width="@dimen/_2pxh"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listrectangle460RowModel.txtTime}"
+                style="@style/txtRalewayromanmedium9_1" tools:text="@string/lbl_6_min_read"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

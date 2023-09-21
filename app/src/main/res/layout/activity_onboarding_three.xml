@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onboardingThreeVM" type="com.docmeapp.app.modules.onboardingthree.data.viewmodel.OnboardingThreeVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStack7xmfive"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle_1">
+        <ImageView android:id="@+id/image7xmFive"
+            android:layout_gravity="top|center"
+            android:layout_height="@dimen/_465pxh"
+            android:layout_width="@dimen/_321pxh"
+            android:scaleType="fitXY" imageRes="@{@drawable/img_7xm5}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_7xm5"/>
+        <LinearLayout android:id="@+id/linearColumnheadline"
+            android:layout_gravity="bottom|center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_33pxv"
+            android:paddingEnd="@dimen/_42pxh"
+            android:paddingStart="@dimen/_42pxh"
+            android:paddingTop="@dimen/_33pxv" style="@style/groupStylewhite_2">
+            <TextView android:id="@+id/txtHeadline"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{onboardingThreeVM.onboardingThreeModel.txtHeadline}"
+                style="@style/txtRalewayromanbold22" tools:text="@string/msg_get_connect_our"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorSlider"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:drawable_normal="@drawable/indicator_unselected_bg_blue_100_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_blue_600_radius_8"
+                app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_4pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnGetstarted"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_291pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_100pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_get_started"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_get_started"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

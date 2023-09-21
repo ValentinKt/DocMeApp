@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listpexelscedricfRowModel" type="com.docmeapp.app.modules.messagehistory.data.model.ListpexelscedricfRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowpexelscedricf"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imagePexelscedricf"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_47pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_25pxh}"
+            imageRes="@{@drawable/img_pexelscedricf_50x47_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_pexelscedricf_50x47_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnname"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtName"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listpexelscedricfRowModel.txtName}"
+                style="@style/txtIntersemibold16" tools:text="@string/msg_dr_marcus_hori"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSymptoms"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listpexelscedricfRowModel.txtSymptoms}"
+                style="@style/txtInterregular12_1" tools:text="@string/msg_i_don_t_have_an"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearColumntemperature"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTemperature"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listpexelscedricfRowModel.txtTemperature}"
+                style="@style/txtInterregular12_2" tools:text="@string/lbl_10_24"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSeverity"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingEnd="@dimen/_4pxh"
+                android:paddingStart="@dimen/_4pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@{listpexelscedricfRowModel.txtSeverity}"
+                style="@style/txtSolidRounded_2" tools:text="@string/lbl_1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

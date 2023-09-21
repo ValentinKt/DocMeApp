@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listunsplash86rvjm9zowyRowModel" type="com.docmeapp.app.modules.articles.data.model.Listunsplash86rvjm9zowyRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearArticle"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_5pxh"
+        android:paddingVertical="@dimen/_5pxv" style="@style/groupStylewhite_11">
+        <ImageView android:id="@+id/imageUnsplash86rVJm9zOwY"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_59pxh"
+            android:layout_width="@dimen/_59pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_unsplash86rvjm9zowy_59x59}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash86rvjm9zowy_59x59"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnthe25healthiestone"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtThe25HealthiestOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:text="@{listunsplash86rvjm9zowyRowModel.txtThe25HealthiestOne}"
+                style="@style/txtRalewayromansemibold12" tools:text="@string/msg_the_25_healthie"/>
+            <LinearLayout android:id="@+id/linearRowlanguage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listunsplash86rvjm9zowyRowModel.txtLanguage}"
+                    style="@style/txtRalewayromanmedium9" tools:text="@string/lbl_jun_10_20212"/>
+                <View
+                    android:background="@drawable/rectangle_bg_gray_500_radius_1"
+                    android:id="@+id/viewEllipseOne"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_2pxh" android:layout_width="@dimen/_2pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listunsplash86rvjm9zowyRowModel.txtTime}"
+                    style="@style/txtRalewayromanmedium9_1" tools:text="@string/lbl_5min_read2"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageBookmark"
+            android:layout_gravity="top"
+            android:layout_height="@dimen/_12pxh"
+            android:layout_width="@dimen/_10pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_bookmark_12x10"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_12x10"/>
+    </LinearLayout>
+</layout>

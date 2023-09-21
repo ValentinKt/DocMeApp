@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listuserRowModel" type="com.docmeapp.app.modules.finddoctors.data.model.ListuserRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowuser"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearGeneral"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <FrameLayout android:id="@+id/frameCategory3"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_64pxh"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_12pxv" style="@style/groupStyleblue_50_01cornerRadius">
+                <ImageView android:id="@+id/imageUser"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_32x32"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_32x32"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtGeneral"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listuserRowModel.txtGeneral}"
+                style="@style/txtRalewayromanregular13" tools:text="@string/lbl_general"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLungs"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <FrameLayout android:id="@+id/frameCategory4"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_64pxh"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_12pxv" style="@style/groupStyleblue_50_01cornerRadius">
+                <ImageView android:id="@+id/imageUserOne"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_3"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_3"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtLungs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listuserRowModel.txtLungs}"
+                style="@style/txtRalewayromanregular13" tools:text="@string/lbl_lungs"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearDentist"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <FrameLayout android:id="@+id/frameCategory"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_64pxh"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_12pxv" style="@style/groupStyleblue_50_01cornerRadius">
+                <ImageView android:id="@+id/imageUserTwo"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_2"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_2"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtDentistvalue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listuserRowModel.txtDentistvalue}"
+                style="@style/txtRalewayromanregular13" tools:text="@string/lbl_dentist"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearPsychiatrist"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <FrameLayout android:id="@+id/frameCategory1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_64pxh"
+                android:paddingBottom="@dimen/_12pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_12pxv" style="@style/groupStyleblue_50_01cornerRadius">
+                <ImageView android:id="@+id/imageSearch"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_search_32x32"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_search_32x32"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtPsychiatristvalue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listuserRowModel.txtPsychiatristvalue}"
+                style="@style/txtRalewayromanregular13" tools:text="@string/lbl_psychiatrist"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

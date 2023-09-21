@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chatWithDoctorVM" type="com.docmeapp.app.modules.chatwithdoctor.data.viewmodel.ChatWithDoctorVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearChatwithDoctor"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDrMarcusHorizonOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtDrMarcusHorizonOne}"
+                style="@style/txtRalewayromansemibold16" tools:text="@string/msg_dr_marcus_hori"/>
+            <LinearLayout android:id="@+id/linearGroup19"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageVideocamera"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_videocamera_black_900"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_videocamera_black_900"/>
+                <ImageView android:id="@+id/imageCall"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_call_black_900"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_call_black_900"/>
+                <ImageView android:id="@+id/imageComponentOne"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_component1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_component1"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnpexelscedricf"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_42pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_42pxv">
+            <LinearLayout
+                android:id="@+id/linearColumnconsultionstartone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_40pxh"
+                android:paddingStart="@dimen/_40pxh"
+                android:paddingTop="@dimen/_17pxv" style="@style/groupStylewhite_5">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtConsultionStartOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtConsultionStartOne}"
+                    style="@style/txtRalewayromansemibold16_6" tools:text="@string/msg_consultion_star"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtYoucanconsult"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtYoucanconsult}"
+                    style="@style/txtRalewayromanmedium12_1" tools:text="@string/msg_you_can_consult"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowpexelscedricf"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imagePexelscedricf"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_pexelscedricf_40x40}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_pexelscedricf_40x40"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndrmarcushorizonthree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDrMarcusHorizonThree"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtDrMarcusHorizonThree}"
+                        style="@style/txtRalewayromansemibold14_3" tools:text="@string/msg_dr_marcus_hori"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtTime}"
+                        style="@style/txtRalewayromanmedium10" tools:text="@string/lbl_10_min_ago"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearChat1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_9pxv" style="@style/groupStylegray_200cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtHelloHowcani"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtHelloHowcani}"
+                    style="@style/txtRalewayromanregular14_4" tools:text="@string/msg_hello_how_can"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearChat2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_6pxh"
+                android:paddingVertical="@dimen/_6pxv" style="@style/groupStyleblue_1">
+                <TextView android:gravity="center_vertical"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtDuration}"
+                    style="@style/txtRalewayromanregular14_5" tools:text="@string/msg_i_have_sufferin"/>
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_gravity="bottom"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_1"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowpexelscedricfone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imagePexelscedricfOne"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_39pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_20pxh}"
+                    imageRes="@{@drawable/img_pexelscedricf_40x39_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_pexelscedricf_40x39_1"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndrmarcushorizonfive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDrMarcusHorizonFive"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtDrMarcusHorizonFive}"
+                        style="@style/txtRalewayromansemibold14_3" tools:text="@string/msg_dr_marcus_hori"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTimeOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtTimeOne}"
+                        style="@style/txtRalewayromanmedium10" tools:text="@string/lbl_5_min_ago"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearChat3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10pxv"
+                android:paddingEnd="@dimen/_13pxh"
+                android:paddingStart="@dimen/_13pxh"
+                android:paddingTop="@dimen/_10pxv" style="@style/groupStylegray_200cornerRadius">
+                <TextView android:id="@+id/txtOkDoyouhave"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtOkDoyouhave}"
+                    style="@style/txtRalewayromanregular14_4" tools:text="@string/msg_ok_do_you_have"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearChat4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_5pxh"
+                android:paddingStart="@dimen/_5pxh"
+                android:paddingTop="@dimen/_6pxv" style="@style/groupStyleblue_1">
+                <TextView android:id="@+id/txtIdonthaveany"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtIdonthaveany}"
+                    style="@style/txtRalewayromanregular14_5" tools:text="@string/msg_i_don_t_have_an2"/>
+                <ImageView android:id="@+id/imageCheckmarkOne"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_1"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowpexelscedricftwo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imagePexelscedricfTwo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_39pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_20pxh}"
+                    imageRes="@{@drawable/img_pexelscedricf_40x39_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_pexelscedricf_40x39_1"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumndrmarcushorizonseven"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDrMarcusHorizonSeven"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtDrMarcusHorizonSeven}"
+                        style="@style/txtRalewayromansemibold14_3" tools:text="@string/msg_dr_marcus_hori"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOnline"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{chatWithDoctorVM.chatWithDoctorModel.txtOnline}"
+                        style="@style/txtRalewayromanmedium10" tools:text="@string/lbl_online"/>
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameTyping"
+                android:layout_height="@dimen/_22pxv"
+                android:layout_width="@dimen/_58pxh"
+                android:paddingBottom="@dimen/_8pxv"
+                android:paddingEnd="@dimen/_13pxh"
+                android:paddingStart="@dimen/_13pxh"
+                android:paddingTop="@dimen/_8pxv" style="@style/groupStylegray_1">
+                <ImageView android:id="@+id/imageGroup141"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="@dimen/_5pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group141"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group141"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowtypemessage"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <EditText
+                android:background="@drawable/rectangle_bg_white_a700_border_blue_gray_50_radius_8"
+                android:drawableEnd="@drawable/img_cut"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:hint="@string/msg_type_message"
+                android:id="@+id/etTypemessage" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_17pxh"
+                android:paddingStart="@dimen/_19pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@={chatWithDoctorVM.chatWithDoctorModel.etTypemessageValue}"
+                android:textColor="@color/gray_500"
+                android:textColorHint="@color/gray_500"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_blue_600_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnSend"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_111pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_38pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_send"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_send"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
